@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">CBI Receitas</string>
+
+    <!-- Home Scree -->
+    <string name="search_label_hint_text">Busque por qualquer receita</string>
+    <string name="label_filter_popular">Populares</string>
+    <string name="label_filter_cupcakes">Cupcakes</string>
+    <string name="label_filter_pizza_doce">Pizza Doce</string>
+    <string name="label_filter_donuts">Donuts</string>
+    <string name="label_filter_tortinhas">Tortinhas</string>
+    <string name="home_title_label_first_line">Aprenda a fazer</string>
+    <string name="home_title_label_second_line">doces profissionais</string>
+    <string name="search_view_home_hint">Pesquise por receitas</string>
+    <string name="tag_vegan">Versão Vegana</string>
+
+    <!-- Recipe Screen -->
+    <string name="ingredients">Ingredientes</string>
+    <string name="btn_go_cooking">Modo de Preparo</string>
+    <string name="ingredient_label"><![CDATA[<b>%s</b> de %s]]></string>
+    <string name="step_label"><![CDATA[<b>Passo %s:</b> %s]]></string>
+    <string name="btn_play">Play</string>
+    <string name="btn_playing">Playing</string>
+
+    <!-- Onboarding Screen -->
+    <string name="slide1_title">Sobre mim</string>
+    <string name="slide1_text">Meu nome é Isa Lepera e sou chefe confeiteira maravilhosa da Cupcakes by Isa.</string>
+    <string name="slide2_title">Objetivo</string>
+    <string name="slide2_text">Meu objetivo é ajudar pequenos negócios gastrônomicos a se estruturarem profissionalmente.</string>
+    <string name="slide3_title">Receitas e Dicas</string>
+    <string name="slide3_text">Este aplicativo contém minhas receitas e algumas dicas empreendedoras que levaram a Cupcakes By Isa aos holofotes.</string>
+    <string name="btn_next">Avançar</string>
+    <string name="btn_end">Fechar</string>
+
+
+    <!-- Contente Descriptions -->
+    <string name="chip_content_description">Imagem representando as categorias de cada receita</string>
+</resources>

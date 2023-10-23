@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "745033124600",
+    "project_id": "recipecbi",
+    "storage_bucket": "recipecbi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745033124600:android:569d15a991e2155468090d",
+        "android_client_info": {
+          "package_name": "com.mazer.cbirecipes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYk4LjulJ89sX70lEJIeAZ4dCFkbekUrs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

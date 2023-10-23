@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/layoutRecipe1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="224dp"
+            android:background="@color/placeholderBackground" />
+
+        <View
+            android:layout_width="248dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/placeholderBackground"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutRecipe2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutRecipe1">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="224dp"
+            android:background="@color/placeholderBackground" />
+
+        <View
+            android:layout_width="248dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/placeholderBackground"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutRecipe2">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="224dp"
+            android:background="@color/placeholderBackground" />
+
+        <View
+            android:layout_width="248dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/placeholderBackground"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

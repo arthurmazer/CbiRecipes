@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.modules.home.MainActivity">
+
+
+    <View
+        android:id="@+id/viewSearch"
+        android:elevation="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@+id/svSearchRecipe"
+        app:layout_constraintBottom_toBottomOf="@+id/svSearchRecipe"
+        app:layout_constraintEnd_toEndOf="@+id/svSearchRecipe"
+        app:layout_constraintStart_toStartOf="@+id/svSearchRecipe" />
+
+    <com.mazer.cbirecipes.presentation.ui.custom_views.SearchView
+        android:id="@+id/svSearchRecipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/svSearchRecipe"
+        app:layout_constraintTop_toBottomOf="@+id/svSearchRecipe" >
+
+        <include
+            layout="@layout/home_placeholder"/>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/svSearchRecipe"
+        app:layout_constraintTop_toBottomOf="@+id/svSearchRecipe"
+        >
+
+        <LinearLayout
+            android:id="@+id/layoutCategoryAndRecipes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/svSearchRecipe"
+            app:layout_constraintTop_toBottomOf="@+id/svSearchRecipe">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFilterRecipes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/svSearchRecipe"
+                app:layout_constraintTop_toBottomOf="@+id/svSearchRecipe"
+                tools:listitem="@layout/chip_layout" />
+
+            <TextView
+                android:id="@+id/tvLabelCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/robotoblack"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:layout_marginStart="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/rvFilterRecipes"
+                app:layout_constraintTop_toBottomOf="@+id/rvFilterRecipes"
+                tools:text="Xxxxxxx" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerViewLayoutRecipes"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:elevation="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelCategory" >
+
+                <include
+                    layout="@layout/recipe_list_placeholder"/>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRecipes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                tools:listitem="@layout/item_recipe"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelCategory" />
+        </LinearLayout>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <include
+        layout="@layout/layout_error"
+        android:id="@+id/layoutError"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
